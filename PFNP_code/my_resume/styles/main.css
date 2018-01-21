@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Raleway');
+
+body {
+  font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+
+.header {
+  border: 1px solid black;
+}
+
+.main-list {
+  list-style-type: none;
+}
+
+ul.top-head, ul#contact {
+  display: inline-block;
+  width: 40%;
+}
+
+#contact {
+  list-style-type: none;
+  float: right;
+  text-align: right;
+}

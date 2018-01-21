@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+27px');
+
+h1,h2,h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #3c250a;
+}
+
+p, li {
+ font-family: 'Slabo 27px', serif;
+ color: #3c250a;
+}
+
+body {
+  background: url('abstract-mosaic-background.png') no-repeat center center fixed;
+  background-size: cover; 
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header, footer {
+  background-color: #595959;
+  text-align: center;
+  padding: 15px 30px ;
+}
+
+.main-content {
+  background-color: #808f85;
+  padding: 10px 0;
+  border-top: 2px solid #cfd11a;
+}
+
+header img {
+  width: 50%;
+  border-radius: 15px;
+}
+
+.main-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-content ul li {
+  display: inline;
+  padding: 10px;
+  font-weight: bold;
+}
+
+a {
+  color: #cfd11a;
+  text-decoration: none;
+}
+
+.main-content p {
+  margin: 10px 40px;
+}
+.main-content h2 {
+  text-align: center;
+}
+
+
+#projects {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  grid-gap: 3%;
+}
+
+.project {
+  width: 100%;
+  display: inline-block;
+  background-color: #f2e9dc;
+  border-radius: 15px;
+}
+
+.project img {
+  max-width: 100%;
+}
