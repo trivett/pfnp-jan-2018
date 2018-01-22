@@ -1,4 +1,4 @@
-$('#movie-search-form').submit(function (e) {
+$('#movie-search-form').keyup(function (e) {
   e.preventDefault();
   $('.result').hide();
   var userSearchQuery = this.query.value;
@@ -17,26 +17,23 @@ function searchOMDB(query) {
     if (omdbData.Response === "True") {
 
       renderMovie(omdbData)
-      console.log(omdbData);
     } else {
       renderError();
-      console.log(omdbData);
     }
   });
 }
 
 function renderMovie(omdbData) {
-  console.log(omdbData);
   $('.result').show();
   $('#title').html(omdbData.Title);
   $('#year').html(omdbData.Year);
   $('#actors').html(omdbData.Actors);
   $("#plot").html(omdbData.Plot);
   $('#director').html(omdbData.Director)
+  $('#awards').html(omdbData.Awards)
   $('#poster').attr("src", omdbData.Poster);
+  $('#movie-website').attr("href", omdbData.Website);
   $('.error').hide();
-
-
 }
 
 function renderError() {

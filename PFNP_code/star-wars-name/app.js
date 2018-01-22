@@ -18,16 +18,34 @@
  * 
  */
 
-// check out what happens when you mouse over the function name
-function myStarWarsName(firstName, lastName, street, city) {
-
-  return "¯\_(ツ)_/¯";
+function cleanString(str) {
+  return str.substring(0, 3);
 }
 
+// function capitalizeFirst(str) {
+//   return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+
+// function myStarWarsName(firstName, lastName, street, city) {
+//   let rawFirst = cleanString(firstName) + cleanString(lastName);
+//   let rawLast = cleanString(street) + cleanString(city);
+//   let swFirst = capitalizeFirst(rawFirst);
+//   let swLast = capitalizeFirst(rawLast);
+
+//   return `Your star wars name is: ${swFirst} ${swLast}`;
+// }
+
+
+
+function myStarWarsName(firstName, lastName, street, city) {
+  let swFirst = _.startCase(cleanString(firstName) + cleanString(lastName));
+  let swLast = _.startCase(cleanString(street) + cleanString(city));
+  return `Your star wars name is: ${swFirst} ${swLast}`;
+}
 
 // I wrote this jQuery listener function for you, but let's walk through together.
 
-$("#sw-name-inputs").on("submit", function () {
+$("#sw-name-inputs").on("keyup", function () {
   let first = $("#first-name").val(); // get the value in the form input with ID of "first-name" (see the HTML) and set it to `first`;
   let last = $("#last-name").val(); // you get the idea
   let street = $("#street").val();

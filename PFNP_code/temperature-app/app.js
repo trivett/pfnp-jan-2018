@@ -1,18 +1,23 @@
-
-
 function farenheitToCelsiusConverter(f) {
-  // paste your function that converts farenheit to celcius here:
-
+  let x = f - 32;
+  let c = (x * 5) / 9;
+  return c;
 }
 
 function clearInputsAndWarnings() {
-  // this function will clear the slate after we ask for another conversion
-
-
+  $('#boiling-warning').hide();
+  $('#freezing-warning').hide();
+  $('#farenheit-input').val('');
 }
 
 function showAnswersAndWarnings(c) {
-  // this function will take in celsius temperature and show the user whether it is freezing or boiling
+  $('#answer').html(c);
+
+  if (c >= 100) {
+    $('#boiling-warning').fadeIn();
+  } else if (c <= 0) {
+    $('#freezing-warning').fadeIn();
+  }
 }
 
 

@@ -47,7 +47,21 @@
     </div>
     <footer>
         <p>&copy; General Assembly 2017</p>
+        <button id="alert-button">Click me</button>
     </footer>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script type="text/javascript">
+    // document.getElementById('alert-button').addEventListener('click', function(){
+    //   document.querySelector('body').style.color = 'red';
+    //   document.querySelector('h1').innerHTML = 'There. it is done.';
+    // });
+    
+    $("#alert-button").on('click', function(){
+      $('body').css('color', 'red');
+      $('h1').html("Now it is done");
+    });
+
+  </script>
 </body>
 </html>
